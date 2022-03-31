@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Post 1",
+    "content": "Text for post 1",
+    "upvotes": 2,
+    "downvotes": 0
+  },
+  {
+    "title": "Post 2",
+    "content": "Text for post 2",
+    "upvotes": 7,
+    "downvotes": 2
+  },
+  {
+    "title": "Post 3",
+    "content": "Text for post 3",
+    "upvotes": 1,
+    "downvotes": 3
+  }
+]

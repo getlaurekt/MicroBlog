@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+%normal-shadow {
+  box-shadow: $default-shadow;
+  transition: box-shadow 0.3s $cubic-bezier;
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+%float-shadow {
+  box-shadow: $default-shadow;
+  transition-property: background-color, box-shadow, transform;
+  transition: 0.3s $cubic-bezier;
+  &:hover {
+    background-color: darken($accent, $amount: 5%);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-5px);
+  }
+}
+%form-shadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%input-state-effects {
+  border: none;
+  outline: 2px solid #a9a9a9;
+  margin-top: 10px;
+  transition-property: background-color, box-shadow;
+  transition: 0.3s $cubic-bezier;
+  &:focus {
+    background-color: $input-bg-color;
+    box-shadow: $default-shadow;
+  }
+}
+%form-input-style {
+  width: 100%;
+  letter-spacing: $spacing;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}

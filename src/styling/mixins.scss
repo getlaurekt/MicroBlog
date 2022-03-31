@@ -1,0 +1,31 @@
+//NOTE: Placeholders
+@import "./placeholders.scss";
+
+@mixin margin($direction, $size) {
+  @if $direction == "horizontal" {
+    margin: 0 $size;
+  } @else if $direction == "vertical" {
+    margin: $size 0;
+  }
+}
+
+@mixin padding($direction, $size) {
+  @if $direction == "horizontal" {
+    margin: 0 $size;
+  } @else if $direction == "vertical" {
+    margin: $size 0;
+  }
+}
+
+@mixin spaceOut-votes($size) {
+  .blog__likes,
+  .blog__dislikes {
+    @extend %flex-center;
+    @include margin("horizontal", $size);
+  }
+}
+@mixin margin-icons($size) {
+  .blog__icon {
+    @include margin("horizontal", $size);
+  }
+}

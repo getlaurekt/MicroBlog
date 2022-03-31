@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<title>Micro Blog</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<div class="blog">
+		<div id="notification" class="notification notification--success hide">
+			<span class="notification__icon">thumb_up</span>
+			<span class="notification__text">Post added successfully</span>
+		</div>
+		<div class="backdrop">
+			<form class="backdrop__form" id="newPost">
+				<h2 class="form__title">Create new post</h2>
+				<label class="form__label">
+					<span class="label__text">Post's title:</span>
+					<input
+						type="text"
+						name="title"
+						id="title"
+						class="label__input"
+						placeholder="Title"
+						minlength="3"
+						maxlength="20"
+						required
+					/>
+				</label>
+				<label class="form__label">
+					<span class="label__text">Post's text:</span>
+					<textarea
+						name="content"
+						id="content"
+						class="label__textarea"
+						placeholder="Content"
+						minlength="5"
+						maxlength="200"
+						required
+					></textarea>
+				</label>
+				<input class="form__submit" type="submit" value="Add Post" />
+			</form>
+		</div>
+		<div class="blog__counter">
+			<span class="counter__text" id="postsCount">Number of posts: 0</span>
+		</div>
+		<div class="blog__posts">
+			<div id="posts"></div>
+		</div>
+	</div>
+	<button class="btn btn--float" id="showForm">
+		<span class="btn__icon">add</span>
+	</button>
+	<script src="src/index.ts"></script>
+</body>
+</html>
+
+
+</html>

@@ -1,0 +1,157 @@
+//NOTE: Fonts/Icons
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+//NOTE: Material Icons Setup
+.blog__icon,
+.btn__icon,
+.notification__icon {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+//NOTE: Components
+@import "./styling/components.scss";
+
+//NOTE: Styling
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &.hideScroll {
+    overflow: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.blog {
+  @extend %style-blog;
+  .blog__counter {
+    .counter__text {
+      @extend %style-counter__text;
+    }
+  }
+}
+
+.blog__posts {
+  @extend %style-blog__posts;
+  .blog__post {
+    @extend %style-blog__post;
+    .blog__title {
+      @extend %style-blog__title;
+    }
+    .blog__text {
+      @extend %style-blog__text;
+    }
+    .blog__votes {
+      @extend %style-blog__votes;
+      .blog__likes {
+        @extend %style-blog__icon--likes;
+        .blog__icon {
+          @extend %style-blog__icon--likes;
+        }
+      }
+      .blog__dislikes {
+        @extend %style-blog__icon--dislikes;
+        .blog__icon {
+          @extend %style-blog__icon--dislikes;
+        }
+      }
+      .blog__icon {
+        @extend %style-blog__icon;
+      }
+    }
+    .blog__btn {
+      @extend %style-blog__btn;
+    }
+  }
+}
+
+.btn {
+  &.btn--float {
+    @extend %style-btn--float;
+    .btn__icon {
+      @extend %style-btn__icon;
+    }
+  }
+}
+
+.backdrop {
+  @extend %style-backdrop;
+  &.show {
+    @extend %style-backdrop--show;
+  }
+  .backdrop__form {
+    @extend %style-backdrop__form;
+    .form__title {
+      @extend %style-form__title;
+    }
+    .form__label {
+      @extend %style-form__label;
+      .label__text {
+        @extend %style-label__text;
+      }
+      .label__input {
+        @extend %style-label__input;
+      }
+      .label__textarea {
+        @extend %style-label__textarea;
+      }
+    }
+    .form__submit {
+      @extend %style-form__submit;
+      &:hover {
+        @extend %style-form__submit--hover;
+      }
+    }
+  }
+}
+
+.notification {
+  @extend %style-notification;
+  .notification__icon {
+    @extend %style-notification__icon;
+  }
+  .notification__text {
+    @extend %style-notification__text;
+  }
+}
