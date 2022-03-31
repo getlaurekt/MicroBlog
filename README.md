@@ -1,0 +1,1 @@
+In this project my friend has shown me new ways of manipulating forms with using built in functions like onsubmit, reset. Showed me easier way to "filter" new added posts from top to bottom by simply using built in javascript method "insertBefore". Rendering post by using for loop and using interface for a callback.
